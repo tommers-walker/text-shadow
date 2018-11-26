@@ -1,0 +1,19 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <h2 class="title">
+    {%- for letter in text|list -%}
+      {%- if letter == ' ' -%}
+        <span class="letter">&nbsp;</span>
+      {%- else -%}
+        <span class="letter js-letter">{{ letter }}</span>
+      {%- endif -%}
+    {%- endfor -%}
+  </h2>
+{% endblock %}
