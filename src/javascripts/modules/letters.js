@@ -8,13 +8,14 @@ const letters = {
 
     tl.staggerFromTo(letterEls, 0.1,
       {
-        textShadow: "1rem 0rem 1rem rgba(0,0,0,0.1)"
+        textShadow: "0.75rem 0rem 1rem rgba(0,0,0,0.1)"
       },
       {
-        scale: 1.05,
-        textShadow: "1rem 0rem 1rem rgba(0,0,0,0.05)",
+        scale: 0.95,
+        textShadow: "0.75rem 0rem 1rem rgba(0,0,0,0.15)",
         yoyo: true,
-        repeat: 1
+        repeat: 1,
+        ease: Power0.easeNone
       },
       0.05
     )
