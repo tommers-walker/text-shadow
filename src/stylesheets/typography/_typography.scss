@@ -1,5 +1,5 @@
 body {
-  font-size: 5rem;
+  font-size: 5vw;
   line-height: 1.5;
   font-family: $ff-primary;
   color: $white;
@@ -7,13 +7,5 @@ body {
 
 .letter {
   display: inline-block;
-  text-shadow: 0.75rem 0rem 1rem rgba(0,0,0,0.1);
-
-  // background-color: rgba($black, 0.1);
-  // color: transparent;
-  // text-shadow: 0.1rem 0rem 0.5rem $white;
-  // text-shadow: 0.75rem 0rem 1rem rgba(0,0,0,0.1);
-  // -webkit-background-clip: text;
-  //    -moz-background-clip: text;
-  //         background-clip: text;
+  opacity: 0;
 }

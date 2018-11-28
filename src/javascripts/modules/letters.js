@@ -4,18 +4,19 @@ const letterEls = Array.from(document.querySelectorAll('.js-letter'));
 
 const letters = {
   init() {
-    const tl = new TimelineMax({repeat: 1, yoyo: true})
+    const tl = new TimelineMax()
 
-    tl.staggerFromTo(letterEls, 0.1,
+    tl.staggerFromTo(letterEls, 0.2,
       {
-        textShadow: "0.75rem 0rem 1rem rgba(0,0,0,0.1)"
+        opacity: 0,
+        scale: 0.95,
+        textShadow: "0 0 0 rgba(0,0,0,0.2)",
       },
       {
-        scale: 0.95,
-        textShadow: "0.75rem 0rem 1rem rgba(0,0,0,0.15)",
-        yoyo: true,
-        repeat: 1,
-        ease: Power0.easeNone
+        opacity: 1,
+        scale: 1,
+        textShadow: "0.5vw 0 1.25vw rgba(0,0,0,0.1)",
+        ease: Back.easeOut.config(1.25)
       },
       0.05
     )
