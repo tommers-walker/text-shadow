@@ -7,6 +7,13 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
+
+  <div class="squares">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="triangle"></div>
+  </div>
+
   <h2 class="title">
     {%- for letter in text|list -%}
       {%- if letter == ' ' -%}
