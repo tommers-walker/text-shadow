@@ -8,10 +8,20 @@
 
 {% block content %}
 
-  <div class="squares">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="triangle"></div>
+  <div class="shapes">
+    <div class="shape circle">
+      <svg class="js-shadow-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="#fff" cx="50" cy="50" r="50" fill-rule="evenodd"/></svg>
+    </div>
+    <div class="shape square">
+      <svg class="js-shadow-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M0 0h100v100H0z" fill-rule="evenodd"/></svg>
+    </div>
+    <div class="shape triangle">
+      <svg class="js-shadow-svg" viewBox="0 0 115 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="triangle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon fill="#fff" points="57.5 0 115 100 -1.42108547e-14 100"></polygon>
+        </g>
+      </svg>
+    </div>
   </div>
 
   <h2 class="title">
@@ -19,7 +29,7 @@
       {%- if letter == ' ' -%}
         <span class="letter">&nbsp;</span>
       {%- else -%}
-        <span class="letter js-letter">{{ letter }}</span>
+        <span class="letter js-shadow-el">{{ letter }}</span>
       {%- endif -%}
     {%- endfor -%}
   </h2>

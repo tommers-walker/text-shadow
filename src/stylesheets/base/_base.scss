@@ -9,45 +9,37 @@ body {
   background-color: $white;
 }
 
-.letter {
-  // text-shadow: 0.5vw 0 1.25vw rgba(0,0,0,0.1);
-  // text-shadow: 0 0 1.25vw rgba(0,0,0,0.1);
-}
+$shapeHeight: rem(50);
 
-.squares {
+.shapes {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   padding: 1vw;
+  width: 100%;
 }
 
-.square {
-  width: 3vw;
-  height: 3vw;
-  box-shadow: 0.5vw 0.5vw 1.25vw 0 rgba(0,0,0,0.1);
+.shape {
+  display: inline-block;
+  height: $shapeHeight;
 
   + #{&} {
     margin-left: 1vw;
   }
 
-  &:first-child {
-    border-radius: 50%;
-  }
+  // svg {
+  //   filter: drop-shadow(0 0 1.25vw rgba(0,0,0,0.1));
+  // }
+}
+
+.circle,
+.square {
+  width: $shapeHeight * (100/100);
+  @include svg-padding(100, 100);
 }
 
 .triangle {
-  position: relative;
-  margin-left: 1vw;
-  width: 3vw;
-
-  &::before {
-    content: '▲';
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 0;
-    left: 0;
-    text-shadow: 0.5vw 0 1.25vw rgba(0,0,0,0.1);
-  }
+  width: $shapeHeight * (115/100);
+  @include svg-padding(115, 100);
 }

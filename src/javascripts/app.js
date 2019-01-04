@@ -1,2 +1,2 @@
-import { letters } from './modules/letters';
-letters.init();
+import { shadows } from './modules/shadow';
+shadows.init();
