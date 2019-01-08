@@ -1,7 +1,7 @@
 import 'gsap';
 
 const shadowEls = Array.from(document.querySelectorAll('.js-shadow-el'));
-const shadowSvgs = Array.from(document.querySelectorAll('.js-shadow-svg'));
+const shadowShapes = Array.from(document.querySelectorAll('.js-shadow-shape'));
 
 const midX = window.innerWidth/2;
 const midY = window.innerHeight/2;
@@ -17,8 +17,8 @@ const shadows = {
     y = -(e.y - midY);
 
     TweenLite.set(shadowEls, {textShadow: `${x*0.01}px ${y*0.01}px 1.25vw rgba(0,0,0,0.1)`});
-    TweenLite.set(shadowSvgs, {webkitFilter: `drop-shadow(${x*0.01}px ${y*0.01}px 1.25vw rgba(0,0,0,0.1))`, onComplete: function() {
-      // console.log(x)
+    TweenLite.set(shadowShapes, {filter: `drop-shadow(rgba(0,0,0,0.2) ${x*0.01}px ${y*0.01}px 0.5vw)`, onComplete: function() {
+      console.log('boom')
     }});
   },
 

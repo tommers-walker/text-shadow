@@ -21,16 +21,12 @@ $shapeHeight: rem(50);
 }
 
 .shape {
-  display: inline-block;
+  display: block;
   height: $shapeHeight;
 
   + #{&} {
     margin-left: 1vw;
   }
-
-  // svg {
-  //   filter: drop-shadow(0 0 1.25vw rgba(0,0,0,0.1));
-  // }
 }
 
 .circle,
